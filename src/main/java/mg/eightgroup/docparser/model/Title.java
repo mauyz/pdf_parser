@@ -6,13 +6,13 @@ public class Title {
     private String value;
     private String text;
     private ArrayList<Chapter> chapters;
-    private ArrayList<Article> getArticle;
+    private ArrayList<Article> articles;
 
-    public Title(String value, String text, ArrayList<Chapter> chapters, ArrayList<Article> getArticle) {
+    public Title(String value, String text, ArrayList<Chapter> chapters, ArrayList<Article> articles) {
         this.value = value;
         this.text = text;
         this.chapters = chapters;
-        this.getArticle = getArticle;
+        this.articles = articles;
     }
 
     public String getValue() {
@@ -40,17 +40,17 @@ public class Title {
     }
 
     public ArrayList<Article> getArticles() {
-        return getArticle;
+        return articles;
     }
 
-    public void setArticles(ArrayList<Article> getArticle) {
-        this.getArticle = getArticle;
+    public void setArticles(ArrayList<Article> articles) {
+        this.articles = articles;
     }
 
     public ArrayList<Article> allArticles() {
         ArrayList<Article> allArticles = new ArrayList<>();
-        if (getArticle != null) {
-            allArticles.addAll(getArticle);
+        if (articles != null) {
+            allArticles.addAll(articles);
         }
         if (chapters != null) {
             for (Chapter ch : chapters) {
